@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Newa&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Mono+One&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body h2 {
+  color: green;
+}
+body header {
+  padding: 12px;
+  background-color: lightgreen;
+  color: #04045f;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body nav {
+  padding: 15px;
+  background-color: lightgreen;
+  color: #04045f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body nav a {
+  color: #04045f;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+body nav a:nth-child(1) {
+  color: rgb(246, 130, 6);
+}
+body nav a:hover {
+  transition: all 300ms;
+  color: rgb(246, 130, 6);
+  text-decoration: underline;
+}
+body main {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 21px;
+}
+body main h2 {
+  margin-left: 72px;
+  align-self: flex-start;
+}
+body main .product-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+body main .product-cards .card {
+  height: 250px;
+  width: 200px;
+  border-radius: 14px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding: 7px;
+}
+body main .product-cards .card img {
+  height: 50%;
+  width: 100%;
+  opacity: 0.5;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body main .product-cards .card:hover {
+  transition: all 300ms;
+  transform: scale(1.04);
+  background-color: rgb(141, 235, 149);
+}
+body main .product-types {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body main .product-types .box {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  border-radius: 14px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  color: #04045f;
+}
+body main .product-types .box img {
+  height: 50%;
+  width: 50%;
+  opacity: 0.5;
+}
+body main .product-types .box:hover {
+  transition: all 300ms;
+  transform: scale(1.04);
+  background-color: rgb(141, 235, 149);
+  transform: scale(1);
+}
+body footer {
+  width: 100%;
+  background-color: lightgreen;
+  color: #04045f;
+  position: absolute;
+  bottom: 0;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=style.css.map */

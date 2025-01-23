@@ -1,0 +1,124 @@
+@import "variables";
+@import "colors";
+@import "mixins";
+
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Newa&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Mono+One&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+
+    h2 {
+        color: $headingColor;
+    }
+    // Header
+    header {
+        padding: $padding;
+        background-color: $bgColor;
+        color: $color;
+        @include flex(row, center, center, wrap);
+    }
+    // Nav
+
+    nav {
+        padding: $padding + 3px;
+        background-color: $bgColor;
+        color: $color;
+        @include flex(row, space-evenly, center, wrap);
+
+        a {
+            color: $color;
+            font-size: $fontSize;
+            font-weight: 600;
+            text-decoration: none;
+        &:nth-child(1)
+        {
+            color: rgb(246, 130, 6);
+        }
+        &:hover
+        {
+            transition: all 300ms;
+            color: rgb(246, 130, 6);
+            text-decoration: underline;
+
+        }
+        }
+        
+    }
+
+    // Main
+    main {
+        padding: $padding + 18px;
+        @include flex(column, center, center, wrap);
+        gap: 21px;
+
+        h2 {
+            margin-left: $padding * 6;
+            align-self: flex-start;
+        }
+
+        .product-cards {
+            @include flex(row, center, center, wrap);
+            gap: 18px;
+
+            .card {
+                @include card();
+                border-radius: $radius;
+                box-shadow: $shadow;
+                padding: $padding - 5px;
+
+                img {
+                    height: 50%;
+                    width: 100%;
+                    opacity: 0.5;
+                    object-fit: contain;
+                }
+
+                &:hover {
+                    @include hover();
+                }
+            }
+        }
+        .product-types {
+            width: 100%;
+            @include flex(row, space-around, center, wrap);
+
+            .box {
+                @include box();
+                @include flex(column, center, center, wrap);
+                gap: 18px;
+                border-radius: $radius;
+                box-shadow: $shadow;
+                color: $color;
+                img {
+                    height: 50%;
+                    width: 50%;
+                    opacity: 0.5;
+                }
+                &:hover {
+                    @include hover();
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+    // Footer
+    footer {
+        width: 100%;
+        background-color: $bgColor;
+        color: $color;
+        position: absolute;
+        bottom: 0;
+        font-size: $fontSize;
+        @include flex(row, center, end, wrap);
+    }
+}

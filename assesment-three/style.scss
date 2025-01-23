@@ -1,0 +1,41 @@
+
+@use 'sass:color'; 
+    @for $i from 1 through 10 {
+      .h-#{$i*5} {
+        height: $i * 5px;
+      }
+    }
+    @for $i from 1 through 20 {
+      .hp-#{$i*5} {
+        height: $i * 5%;
+      }
+    }
+    @for $i from 1 through 10 {
+      .w-#{$i*10} {
+        width: $i * 10px;
+      }
+    }
+    @for $i from 1 through 20 {
+      .wp-#{$i*10} {
+        width: $i * 10%;
+      }
+    }
+    @for $i from 1 through 10 {
+        .br-#{$i*10} {
+          border-radius: $i * 10px;
+        }
+      }
+    
+    
+    $colors: (red, orange,yellow, green,blue,indigo,violet);
+    
+        @each $color in $colors {
+      .bg-#{$color}-50 {
+        background-color: color.change($color, $whiteness: 95%);
+      }
+      @for $i from 1 to 10 {
+        .bg-#{$color}-#{$i*100} {
+          background-color: color.change($color, $whiteness: 100% - $i * 10%);
+        }
+      }
+    }
